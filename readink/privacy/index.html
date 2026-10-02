@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How readink handles your books, reading data, server connections, iCloud sync, and diagnostic logs.">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://inkpotsoft.github.io/readink/privacy/">
+  <title>readink Privacy Policy | InkpotSoft</title>
+  <style>
+    :root { --paper: #faf9f5; --ink: #263731; --muted: #626b65; --rule: #d9dfd6; --accent: #315d4b; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 2rem; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 1.0625rem/1.8 Georgia, "Times New Roman", serif; overflow-wrap: anywhere; }
+    .page { width: min(100% - 3rem, 46rem); margin: 0 auto; padding: 3rem 0 4rem; }
+    .masthead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+    .brand { font-size: 1.125rem; letter-spacing: .035em; }
+    .brand span { color: var(--muted); font-size: .9rem; margin-left: .6rem; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+    h1 { margin: 2.5rem 0 .4rem; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
+    h2 { margin: 2rem 0 .5rem; font-size: 1.35rem; line-height: 1.5; font-weight: 600; }
+    p { margin: .65rem 0 1rem; }
+    .date { color: var(--muted); font-size: .95rem; }
+    .intro { margin-top: 1.75rem; font-size: 1.15rem; }
+    ul { padding-left: 1.4rem; }
+    li { margin: .65rem 0; }
+    .notice { padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: #f0f2ec; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 480px) { .page { width: calc(100% - 2rem); padding-top: 1.5rem; } .brand span { display: block; margin-left: 0; } }
+    @media print { body { background: white; color: black; } .page { width: 100%; padding: 0; } a { color: inherit; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div class="brand">readink <span>by InkpotSoft</span></div>
+    </header>
+    <main>
+      <article lang="en">
+        <h1>Privacy Policy</h1>
+        <p class="date">Effective date: <time datetime="2026-10-02">October 2, 2026</time></p>
+        <p class="intro">Your books and reading data belong to you. This policy explains how readink, an EPUB reader for iPhone and iPad developed by InkpotSoft, handles information when you use the app.</p>
+
+        <h2>1. Our approach</h2>
+        <p>readink does not require an InkpotSoft account. We do not operate a server that receives your library, reading history, or server credentials from the app. The app does not include advertising, third-party behavioral analytics, or cross-app tracking. We do not sell your personal information.</p>
+        <p>Information may leave your device when you connect to a book server, enable iCloud synchronization, load external book resources, open external links, or choose to share information. These cases are explained below.</p>
+
+        <h2>2. Books and reading data on your device</h2>
+        <p>The app stores imported EPUB files, downloaded books, covers, book metadata, reading positions, bookmarks, annotations, reading sessions, search history, and preferences on your device as needed to provide reading, library management, search, and reading statistics. Temporary files and cached resources support imports, downloads, and rendering.</p>
+        <p>Importing a local book does not upload its file to InkpotSoft. Some publications may contain external resources or links. Loading such resources or opening a link can connect to the provider of that content, which may receive normal network request information.</p>
+
+        <h2>3. Book server connections</h2>
+        <p>If you add a Komga or Kavita server, readink connects directly to the server you specify to authenticate, browse libraries, retrieve metadata and covers, download books, and synchronize reading progress where supported. Requests may include your username, password or API key, account and book identifiers, and reading progress. The server operator can also receive connection information, such as your IP address.</p>
+        <p>Saved connection details and credentials are stored in Apple's Keychain. They are not sent to an InkpotSoft server. The operator of the server you choose controls its data handling and retention. Use a server you trust. HTTPS protects supported connections in transit; HTTP connections do not provide that protection.</p>
+
+        <h2>4. iCloud synchronization</h2>
+        <p>When the applicable synchronization setting is enabled and iCloud is available, readink uses Apple services to synchronize the following information:</p>
+        <ul>
+          <li><strong>Preferences:</strong> supported reading and library preferences use iCloud Key-Value Store.</li>
+          <li><strong>Reading history:</strong> completed reading session records, including book identifiers, timing, device category, and reading statistics, together with associated book metadata such as titles, authors, covers, and library or source names, use CloudKit in your iCloud account.</li>
+          <li><strong>Server connections:</strong> connection details, passwords, and API keys use iCloud Keychain when you enable server connection synchronization.</li>
+        </ul>
+        <p>readink does not use these synchronization features to upload your EPUB files. Apple processes synchronized information under its <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a> and service terms. InkpotSoft does not receive your Apple account password.</p>
+        <p>Turning a synchronization feature off stops that feature on the device and preserves local data. It does not, by itself, delete previously synchronized data from iCloud or other devices.</p>
+
+        <h2>5. Diagnostics and information you share</h2>
+        <p>readink records diagnostic logs on your device to help investigate errors. Logs can include operation names, timestamps, durations, error codes, application and device software information, and numerical diagnostic details. Values designated as private, including sensitive book or connection details, are redacted by the app's logging system.</p>
+        <p>Logs are eligible for automatic cleanup after seven days; cleanup runs during app use, so an expired file may remain until the next cleanup. You can adjust logging detail and clear saved logs in Settings → Logs. The file currently being recorded is retained.</p>
+        <p>Logs are not automatically uploaded to InkpotSoft. If you choose to share a log, the selected recipient or service receives that copy. Review a file before sharing it. Apple's optional system diagnostics and crash-reporting services are governed by your Apple settings and Apple's terms.</p>
+
+        <h2>6. Permissions</h2>
+        <p>You choose files for import using the system file picker. The app may request local network access to connect to a book server on your network. You can manage local network permission in iOS or iPadOS Settings. Disabling access may prevent related connections from working.</p>
+
+        <h2>7. Retention and deletion</h2>
+        <p>Local books, reading data, preferences, and connection records are kept until you remove them using an available app control or remove the app's local data. Temporary files and caches may be cleaned up automatically.</p>
+        <ul>
+          <li>Use library management to delete imported books or remove downloaded copies. Removing a download does not delete the original book from its server.</li>
+          <li>Remove saved server connections through library settings. Removing a local connection does not necessarily remove a separately synchronized copy.</li>
+          <li>Use Settings → Logs to clear saved logs, subject to the current recording file described above.</li>
+          <li>Use Apple's available iCloud and account controls to manage cloud data, and contact your server operator to manage information retained by that server.</li>
+        </ul>
+        <p>Deleting the app removes its local app container, but it does not necessarily remove Keychain records, iCloud data, device backups, data on your book server, or copies you have shared. InkpotSoft cannot directly delete data held solely on your devices or by your chosen providers.</p>
+
+        <h2>8. Contact and privacy requests</h2>
+        <p>For questions about this policy or readink's handling of information, contact InkpotSoft through the <a href="https://github.com/InkpotSoft/inkpotsoft.github.io/issues/new">website repository's GitHub Issues</a>. If you contact us, we use the information you provide to answer your request and keep it for as long as needed to handle that request and any applicable obligations.</p>
+        <p class="notice">GitHub Issues are public. Do not include personal information, passwords, API keys, server addresses, book files, or diagnostic logs in a public issue.</p>
+
+        <h2>9. This policy website</h2>
+        <p>This page is hosted on GitHub Pages. It contains no advertising, analytics scripts, external fonts, or embedded third-party media. GitHub states that it logs visitors' IP addresses for security purposes. Website hosting and GitHub Issues are subject to the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+        <h2>10. Changes</h2>
+        <p>We may update this policy when readink's features or data handling change. The effective date identifies the current version. If a change requires additional notice or permission, we will provide it as required.</p>
+      </article>
+    </main>
+    <footer>InkpotSoft · readink · 2026</footer>
+  </div>
+</body>
+</html>
