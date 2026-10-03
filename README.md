@@ -4,6 +4,7 @@ Static pages for `https://inkpotsoft.github.io/`.
 
 ## Pages
 
+- `/readink/support/`: readink support, contact information, and usage guidance in English.
 - `/readink/privacy/`: readink privacy policy in English.
 - `/` and `/readink/`: intentionally empty until product pages are prepared.
 
@@ -17,6 +18,7 @@ No package installation or build step is required.
 ## Local preview
 
 Run `python3 -m http.server 8080` in this directory and visit
+`http://localhost:8080/readink/support/` or
 `http://localhost:8080/readink/privacy/`.
 
 ## Policy maintenance
