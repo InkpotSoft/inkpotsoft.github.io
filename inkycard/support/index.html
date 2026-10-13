@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help with InkyCard for macOS: importing dictionaries, connecting Anki, pronunciation, lookup history, and contacting InkpotSoft.">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://inkpotsoft.github.io/inkycard/support/">
+  <title>InkyCard Support | InkpotSoft</title>
+  <style>
+    :root { --paper: #faf9f5; --ink: #263731; --muted: #626b65; --rule: #d9dfd6; --accent: #315d4b; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 2rem; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 1.0625rem/1.8 Georgia, "Times New Roman", serif; overflow-wrap: anywhere; }
+    .page { width: min(100% - 3rem, 46rem); margin: 0 auto; padding: 3rem 0 4rem; }
+    .masthead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+    .brand { font-size: 1.125rem; letter-spacing: .035em; }
+    .brand span { color: var(--muted); font-size: .9rem; margin-left: .6rem; }
+    .masthead nav { display: flex; flex-wrap: wrap; gap: 1rem; font-size: .95rem; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+    h1 { margin: 2.5rem 0 .6rem; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
+    h2 { margin: 2rem 0 .5rem; font-size: 1.35rem; line-height: 1.5; font-weight: 600; }
+    p { margin: .65rem 0 1rem; }
+    .intro { font-size: 1.15rem; }
+    .platform { color: var(--muted); font-size: .95rem; }
+    .notice { margin: 1.5rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: #f0f2ec; }
+    ul { padding-left: 1.4rem; }
+    li { margin: .65rem 0; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 480px) { .page { width: calc(100% - 2rem); padding-top: 1.5rem; } .brand span { display: block; margin-left: 0; } }
+    @media print { body { background: white; color: black; } .page { width: 100%; padding: 0; } a { color: inherit; } }
+    .date { color: var(--muted); font-size: .95rem; }
+    ol { padding-left: 1.4rem; }
+    code { font-size: .9em; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div class="brand">InkyCard <span>by InkpotSoft</span></div>
+      <nav aria-label="Website">
+        <a href="../">InkyCard</a>
+        <a href="../privacy/">Privacy Policy</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Support</h1>
+      <p class="intro">Help with dictionaries, pronunciation, and making Anki cards on your Mac.</p>
+      <p class="platform">InkyCard requires macOS 26 or later.</p>
+
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact InkpotSoft</h2>
+        <p class="notice">Email <a href="mailto:inkpotsoft@icloud.com?subject=InkyCard%20Support">inkpotsoft@icloud.com</a> for help, bug reports, feature suggestions, or a request for the corresponding source code for your version.</p>
+        <p>Please include your InkyCard version, macOS version, what you expected to happen, and the steps that led to the problem. If relevant, include the dictionary name and the error message.</p>
+        <p>Remove private information from screenshots and attachments. Do not send passwords, API keys, or your entire Anki collection.</p>
+      </section>
+
+      <section aria-labelledby="start-heading">
+        <h2 id="start-heading">Start with a dictionary</h2>
+        <ol>
+          <li>Open <strong>Settings &gt; Dict</strong>.</li>
+          <li>Choose <strong>Add Dictionaries...</strong> and select a Yomitan-format dictionary ZIP. Alternatively, choose <strong>Import Preset Dictionary...</strong> to download Jitendex or JMnedict.</li>
+          <li>Enable the dictionary and arrange its priority, then type or paste a Japanese word or sentence in the lookup window. Select a matching word to see its entries.</li>
+        </ol>
+        <p>Definitions, images, word frequency, and pitch accents depend on the dictionaries you import. Each dictionary has its own license.</p>
+      </section>
+
+      <section aria-labelledby="anki-heading">
+        <h2 id="anki-heading">Connect to Anki</h2>
+        <ol>
+          <li>Install desktop Anki and the AnkiConnect add-on, then restart Anki and keep it open. See the <a href="https://foosoft.net/projects/anki-connect/">AnkiConnect setup instructions</a>.</li>
+          <li>In InkyCard, open <strong>Settings &gt; Anki</strong> and enable Anki integration. For Anki on the same Mac, the usual server address is <code>http://127.0.0.1:8765</code>. Enter an API key only if you configured one in AnkiConnect.</li>
+          <li>Select a deck and the built-in note type, or select an existing note type and configure its field mapping. Choose <strong>Save</strong>.</li>
+          <li>Look up a word and choose <strong>Add</strong> on the entry you want to study.</li>
+        </ol>
+        <p>Anki integration is optional. If the connection fails, check that Anki is open, AnkiConnect is installed, and the server address and API key match its configuration. Save again after changing a deck, note type, or field mapping.</p>
+        <p>If an entry is reported as a duplicate, review the existing card before choosing to add another. Duplicate scope can be adjusted in <strong>Settings &gt; Anki &gt; Advanced</strong>.</p>
+      </section>
+
+      <section aria-labelledby="audio-heading">
+        <h2 id="audio-heading">Pronunciation and card audio</h2>
+        <p>Open <strong>Settings &gt; Audio</strong>, choose an available Japanese voice, and use the audio preview to check playback. The system audio source uses voices installed on your Mac.</p>
+        <p>To attach pronunciation audio to new Anki notes, enable <strong>Include Audio</strong> in Anki settings and save. If you use an existing note type, make sure its field mapping includes Audio.</p>
+      </section>
+
+      <section aria-labelledby="data-heading">
+        <h2 id="data-heading">History and dictionary backups</h2>
+        <p>In <strong>Settings &gt; History</strong>, choose how long to keep viewed words or use <strong>Clear History...</strong>. History stores the words you open, rather than every text you type.</p>
+        <p>Use <strong>Export...</strong> in dictionary settings to save a dictionary collection. Importing a collection replaces the current dictionaries after confirmation. Keep a backup before replacing a collection.</p>
+        <p>Read the <a href="../privacy/">Privacy Policy</a> for details about local storage and optional connections.</p>
+      </section>
+    </main>
+    <footer>
+      <span>InkpotSoft &middot; InkyCard &middot; 2026</span>
+      <nav aria-label="Footer">
+        <a href="../support/">Support</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../#license">Open Source &amp; License</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

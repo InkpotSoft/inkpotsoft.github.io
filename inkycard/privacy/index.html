@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How InkyCard handles local dictionaries, lookup history, optional Anki connections, clipboard access, and support information.">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://inkpotsoft.github.io/inkycard/privacy/">
+  <title>InkyCard Privacy Policy | InkpotSoft</title>
+  <style>
+    :root { --paper: #faf9f5; --ink: #263731; --muted: #626b65; --rule: #d9dfd6; --accent: #315d4b; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 2rem; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 1.0625rem/1.8 Georgia, "Times New Roman", serif; overflow-wrap: anywhere; }
+    .page { width: min(100% - 3rem, 46rem); margin: 0 auto; padding: 3rem 0 4rem; }
+    .masthead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+    .brand { font-size: 1.125rem; letter-spacing: .035em; }
+    .brand span { color: var(--muted); font-size: .9rem; margin-left: .6rem; }
+    .masthead nav { display: flex; flex-wrap: wrap; gap: 1rem; font-size: .95rem; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+    h1 { margin: 2.5rem 0 .6rem; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
+    h2 { margin: 2rem 0 .5rem; font-size: 1.35rem; line-height: 1.5; font-weight: 600; }
+    p { margin: .65rem 0 1rem; }
+    .intro { font-size: 1.15rem; }
+    .platform { color: var(--muted); font-size: .95rem; }
+    .notice { margin: 1.5rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: #f0f2ec; }
+    ul { padding-left: 1.4rem; }
+    li { margin: .65rem 0; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 480px) { .page { width: calc(100% - 2rem); padding-top: 1.5rem; } .brand span { display: block; margin-left: 0; } }
+    @media print { body { background: white; color: black; } .page { width: 100%; padding: 0; } a { color: inherit; } }
+    .date { color: var(--muted); font-size: .95rem; }
+    ol { padding-left: 1.4rem; }
+    code { font-size: .9em; }
+    footer nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div class="brand">InkyCard <span>by InkpotSoft</span></div>
+      <nav aria-label="Website">
+        <a href="../">InkyCard</a>
+        <a href="../support/">Support</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="date">Effective date: October 13, 2026</p>
+      <p class="intro">InkyCard is a macOS dictionary and Anki companion from InkpotSoft. This policy explains how the app and its support website handle information.</p>
+      <p class="notice">Dictionary lookup takes place on your Mac. InkyCard does not require an InkpotSoft account and does not automatically upload your dictionaries, lookup history, or text to InkpotSoft. The app contains no advertising or analytics SDKs.</p>
+
+      <section aria-labelledby="local-heading">
+        <h2 id="local-heading">Information stored on your Mac</h2>
+        <ul>
+          <li><strong>Dictionaries:</strong> Imported entries, images, and dictionary metadata are copied into local app storage so you can look them up without a network connection.</li>
+          <li><strong>Lookup history:</strong> Words whose entries you open and their viewing times are stored locally. History does not store every keystroke, the full text of pasted sentences, or copies of the displayed definitions.</li>
+          <li><strong>Preferences:</strong> Dictionary priorities, display styles, shortcuts, audio preferences, and Anki connection settings are stored locally.</li>
+          <li><strong>AnkiConnect API key:</strong> If you save a key, it is stored in the macOS Keychain rather than in ordinary app preferences.</li>
+        </ul>
+        <p>Pronunciation uses system speech synthesis with voices installed on your Mac. InkyCard does not record your microphone or send pronunciation text to an InkpotSoft speech service.</p>
+      </section>
+
+      <section aria-labelledby="clipboard-heading">
+        <h2 id="clipboard-heading">Optional clipboard access</h2>
+        <p>If you enable <strong>Use Clipboard When Opening Quick Query</strong>, InkyCard reads eligible clipboard text when you open Quick Query to fill the lookup field. This option is off by default and can be turned off in settings. File references, blank text, and overly long text are skipped.</p>
+        <p>Clipboard text is processed locally for lookup. If you choose to create an Anki note that includes the current sentence, that sentence is sent to your configured AnkiConnect endpoint along with the note.</p>
+      </section>
+
+      <section aria-labelledby="connections-heading">
+        <h2 id="connections-heading">Connections you choose to use</h2>
+        <ul>
+          <li><strong>Dictionary downloads:</strong> Choosing a preset dictionary downloads it from its publisher’s release on GitHub. GitHub and its delivery services receive the network information needed to provide the download, such as your IP address. InkyCard does not include your lookup history or query text in these requests.</li>
+          <li><strong>Anki integration:</strong> When you configure Anki, InkyCard communicates directly with the AnkiConnect server address you supply. It retrieves decks, note types, and existing notes or media for setup, duplicate checks, and previews. When you add a note, it sends the mapped word, reading, definitions, and other selected content, which may include the current sentence, images, or pronunciation audio. A configured API key is sent to that endpoint to authorize requests.</li>
+          <li><strong>Anki sync:</strong> If you enable Sync After Adding, InkyCard asks Anki to sync after a successful addition. Anki’s own sync settings and the policies of its sync provider apply.</li>
+          <li><strong>External links and exported files:</strong> Opening a website uses your browser and that website’s policies. Exported dictionary collections are saved to the location you choose; sharing or syncing those files is under your control.</li>
+        </ul>
+        <p>The default AnkiConnect address points to Anki on your own Mac. If you configure a remote server, the note content and credentials are sent to that server instead. Choose an endpoint you trust.</p>
+      </section>
+
+      <section aria-labelledby="retention-heading">
+        <h2 id="retention-heading">Retention and your controls</h2>
+        <p>Lookup history defaults to a one-month retention window. You can choose one week, one month, one year, or forever in <strong>Settings &gt; History</strong>, or clear the history there. Older entries are filtered when history is loaded or updated; shortening the retention period removes older entries immediately.</p>
+        <p>You can delete imported dictionaries in dictionary settings. This does not delete the original files you imported. Saving an empty AnkiConnect API Key field removes the saved key from Keychain.</p>
+        <p>Removing InkyCard does not necessarily remove its local app data or Keychain items. Notes already added to Anki and any exported files or backups remain separate from InkyCard and must be managed in their respective locations.</p>
+      </section>
+
+      <section aria-labelledby="support-heading">
+        <h2 id="support-heading">Support messages and diagnostics</h2>
+        <p>If you email <a href="mailto:inkpotsoft@icloud.com?subject=InkyCard%20Privacy">inkpotsoft@icloud.com</a>, InkpotSoft receives your email address, message, and any attachments you choose to send. We use that information to respond to your request and investigate the issue. Our email provider also processes the messages.</p>
+        <p>Support correspondence is retained as needed to handle your request and related follow-up. You can contact us to request access, correction, or deletion of information you have provided, subject to applicable obligations. Do not include passwords, API keys, or unrelated private information.</p>
+        <p>The app may write operational events and error codes to macOS system logs. It does not automatically send those logs to InkpotSoft. If you choose to share a diagnostic report, review it for private information first. System diagnostics handled by Apple follow your macOS settings and Apple’s policies.</p>
+      </section>
+
+      <section aria-labelledby="website-heading">
+        <h2 id="website-heading">This website</h2>
+        <p>This static website is hosted on GitHub Pages. These pages do not include analytics scripts, advertising, or tracking cookies added by InkpotSoft. GitHub may process technical information about visits, including IP addresses and request information, under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>.</p>
+      </section>
+
+      <section aria-labelledby="changes-heading">
+        <h2 id="changes-heading">Changes and contact</h2>
+        <p>We will update this page and its effective date when our data handling changes. For privacy questions or requests, email <a href="mailto:inkpotsoft@icloud.com?subject=InkyCard%20Privacy">inkpotsoft@icloud.com</a>. For app help, visit <a href="../support/">InkyCard Support</a>.</p>
+      </section>
+    </main>
+    <footer>
+      <span>InkpotSoft &middot; InkyCard &middot; 2026</span>
+      <nav aria-label="Footer">
+        <a href="../support/">Support</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../#license">Open Source &amp; License</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>

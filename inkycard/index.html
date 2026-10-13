@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="InkyCard is a macOS dictionary and Anki companion. Look up words with Yomitan dictionaries, listen to pronunciation, and turn definitions into flashcards.">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://inkpotsoft.github.io/inkycard/">
+  <title>InkyCard | InkpotSoft</title>
+  <style>
+    :root { --paper: #faf9f5; --ink: #263731; --muted: #626b65; --rule: #d9dfd6; --accent: #315d4b; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 2rem; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 1.0625rem/1.8 Georgia, "Times New Roman", serif; overflow-wrap: anywhere; }
+    .page { width: min(100% - 3rem, 46rem); margin: 0 auto; padding: 3rem 0 4rem; }
+    .masthead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+    .brand { font-size: 1.125rem; letter-spacing: .035em; }
+    .brand span { color: var(--muted); font-size: .9rem; margin-left: .6rem; }
+    .masthead nav { display: flex; flex-wrap: wrap; gap: 1rem; font-size: .95rem; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
+    h1 { margin: 2.5rem 0 .6rem; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
+    h2 { margin: 2rem 0 .5rem; font-size: 1.35rem; line-height: 1.5; font-weight: 600; }
+    p { margin: .65rem 0 1rem; }
+    .intro { font-size: 1.15rem; }
+    .platform { color: var(--muted); font-size: .95rem; }
+    .notice { margin: 1.5rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--accent); background: #f0f2ec; }
+    ul { padding-left: 1.4rem; }
+    li { margin: .65rem 0; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+    @media (max-width: 480px) { .page { width: calc(100% - 2rem); padding-top: 1.5rem; } .brand span { display: block; margin-left: 0; } }
+    @media print { body { background: white; color: black; } .page { width: 100%; padding: 0; } a { color: inherit; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <div class="brand">InkyCard <span>by InkpotSoft</span></div>
+      <nav aria-label="Website">
+        <a href="#license">Open Source &amp; License</a>
+        <a href="support/">Support</a>
+        <a href="privacy/">Privacy Policy</a>
+      </nav>
+    </header>
+    <main>
+      <h1>From words to flashcards.</h1>
+      <p class="intro">Look up words, explore definitions, and save what you want to learn. InkyCard brings Yomitan dictionaries and Anki card creation to a native macOS app.</p>
+      <p class="platform">For macOS 26 and later.</p>
+
+      <section aria-labelledby="dictionary-heading">
+        <h2 id="dictionary-heading">Your dictionaries, together</h2>
+        <p>Import dictionaries in Yomitan format, choose which ones to use, and arrange their order. Look up words and inflected forms, with definitions, dictionary images, word frequency, and pitch accents where your dictionaries provide them.</p>
+      </section>
+
+      <section aria-labelledby="anki-heading">
+        <h2 id="anki-heading">Make cards in Anki</h2>
+        <p>Connect to Anki through AnkiConnect, choose your deck and note type, and map dictionary content to your existing fields. Add definitions and images, with optional pronunciation audio. Anki integration requires desktop Anki with the AnkiConnect add-on installed and running.</p>
+      </section>
+
+      <section aria-labelledby="audio-heading">
+        <h2 id="audio-heading">Listen and make it your own</h2>
+        <p>Listen to pronunciation using the voices available on your Mac. Customize dictionary display with CSS and preview your changes inside the app.</p>
+      </section>
+
+      <section id="license" aria-labelledby="license-heading">
+        <h2 id="license-heading">Open source &amp; license</h2>
+        <p>InkyCard is licensed under the GNU General Public License, version 3 or, at your option, any later version (<strong>GPL-3.0-or-later</strong>). You may use, modify, and redistribute the software under the terms of that license.</p>
+        <p>Copyright &copy; 2026 InkpotSoft. InkyCard includes code, templates, and styles from <a href="https://github.com/yomidevs/yomitan">Yomitan</a>, including work originally developed for Yomichan:</p>
+        <ul>
+          <li>Copyright &copy; 2023–2026 Yomitan Authors.</li>
+          <li>Copyright &copy; 2016–2022 Yomichan Authors.</li>
+        </ul>
+        <p class="notice">This software is distributed without any warranty, including the implied warranties of merchantability or fitness for a particular purpose. See the GNU General Public License for details.</p>
+        <p><a href="LICENSE.txt">Read the full GPLv3 license</a>.</p>
+        <p>Other included components retain their own licenses and copyright notices. Dictionary content has separate licenses; the application's GPL license does not change the terms of the dictionaries you import.</p>
+      </section>
+
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Get in touch</h2>
+        <p>For help with InkyCard or to request the corresponding source code for your version, contact <a href="mailto:inkpotsoft@icloud.com?subject=InkyCard%20Support">inkpotsoft@icloud.com</a>. Visit <a href="support/">InkyCard Support</a> for setup guidance and troubleshooting, or read our <a href="privacy/">Privacy Policy</a>.</p>
+      </section>
+    </main>
+    <footer>
+      <span>InkpotSoft &middot; InkyCard &middot; 2026</span>
+      <a href="support/">Support</a>
+      <a href="privacy/">Privacy Policy</a>
+      <a href="#license">Open Source &amp; License</a>
+    </footer>
+  </div>
+</body>
+</html>
